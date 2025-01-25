@@ -4,7 +4,7 @@ import Bg from "../assets/images/Montain-background-2.jpg"
 function About() {
     return (
         <>
-            <Banner image={Bg} />
+            <Banner image={Bg} alt={"Panorama sur des montagnes"} />
         </>
     )
 }
