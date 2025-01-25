@@ -1,5 +1,16 @@
+import Banner from "../components/Banner/Banner"
+import Bg from "../assets/images/Montain-background.jpg"
+
 function Home() {
-    return <h1>Bienvenue sur la page d'accueil</h1>;
+
+    const text = "Chez vous, partout et ailleurs"
+
+    return (
+        <>
+            <Banner image={Bg} title={text} alt={"Falaise au bord de la mer"} />
+        </>
+    )
+
 }
 
 export default Home;

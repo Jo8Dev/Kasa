@@ -1,3 +1,5 @@
+@use "./mixins" as m;
+
 //** Définition des styles généraux**//
 .layout {
     display: flex;
@@ -37,10 +39,14 @@ p {
 
 // Container principal pour centrer le contenu
 .container {
-    width: 86.15vw; // Proportion de 1240px sur 1440px
+    width: 88.89vw; // Proportion de 1240px sur 1440px
     max-width: 3308px; // Largeur max pour un écran 4K
     margin: 0 auto;
     padding: 0 20px;
+
+    @include m.responsive(mobile) {
+        width: 100vw;
+    }
 }
 
 // Suppression du style des listes

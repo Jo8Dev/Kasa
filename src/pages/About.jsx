@@ -1,5 +1,12 @@
+import Banner from "../components/Banner/Banner";
+import Bg from "../assets/images/Montain-background-2.jpg"
+
 function About() {
-    return <h1>À propos de nous</h1>;
+    return (
+        <>
+            <Banner image={Bg} />
+        </>
+    )
 }
 
 export default About;
