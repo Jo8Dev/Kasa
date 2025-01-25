@@ -1,0 +1,79 @@
+//** Définition des styles généraux**//
+.layout {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; // S'assure que toute la hauteur est prise
+}
+
+main {
+    flex: 1; // Permet au contenu de grandir pour repousser le footer
+}
+
+body {
+    font-family: "Montserrat", serif;
+    font-weight: 500;
+    background-color: #fff;
+    color: #000000;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+// Styles généraux pour les titres et paragraphes
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 500;
+    margin: 0;
+}
+
+p {
+    font-size: 16px;
+    margin: 0 0 10px;
+}
+
+// Container principal pour centrer le contenu
+.container {
+    width: 86.15vw; // Proportion de 1240px sur 1440px
+    max-width: 3308px; // Largeur max pour un écran 4K
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+// Suppression du style des listes
+ul,
+ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+// Suppression du style des liens
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+// Styles des boutons globaux
+button {
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 10px 20px;
+    background-color: #ff6060;
+    color: white;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+        background-color: darken(#ff6060, 10%);
+    }
+}

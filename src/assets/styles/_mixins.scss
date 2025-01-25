@@ -1,0 +1,34 @@
+// Mixin pour centrer en flexbox
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+// Mixin pour centrer horizontalement (sans flex)
+@mixin center-horizontal {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+// Mixins Responsive (Breakpoint Manager)
+@mixin responsive($breakpoint) {
+    @if $breakpoint ==mobile {
+        @media (max-width: 768px) {
+            @content;
+        }
+    }
+
+    @else if $breakpoint ==tablet {
+        @media (max-width: 1024px) {
+            @content;
+        }
+    }
+
+    @else if $breakpoint ==desktop {
+        @media (max-width: 1440px) {
+            @content;
+        }
+    }
+}

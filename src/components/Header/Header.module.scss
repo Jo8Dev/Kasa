@@ -1,0 +1,26 @@
+@use "../../assets/styles/mixins" as m;
+
+
+.header {
+    @include m.flex-center;
+    justify-content: space-between;
+    width: 86.15vw; // Proportion de 1240px sur 1440px
+    max-width: 3308px; // Largeur max pour un écran 4K
+    margin: 0 auto;
+    padding: 0 20px;
+    margin-top: 45px;
+
+    img {
+        max-height: 68px;
+        height: 100%;
+        max-width: 210px;
+        width: 100%;
+    }
+
+    @include m.responsive(mobile) {
+        img {
+            max-height: 46px;
+            max-width: 145px;
+        }
+    }
+}

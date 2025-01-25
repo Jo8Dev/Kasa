@@ -1,0 +1,24 @@
+@use "../../assets/styles/mixins" as m;
+@use"../../assets/styles/variables" as v;
+
+
+.nav {
+    max-width: 309px;
+    width: 100%;
+    font-size: 24px;
+
+    ul {
+        @include m.flex-center;
+        justify-content: space-around;
+    }
+
+    @include m.responsive(mobile) {
+        font-size: 12px;
+        padding-left: 10px;
+
+        ul {
+            gap: 26px;
+        }
+
+    }
+}

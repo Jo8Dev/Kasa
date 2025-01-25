@@ -1,0 +1,30 @@
+@use "../../assets/styles/mixins" as m;
+@use "../../assets/styles/variables" as v;
+
+footer {
+    @include m.flex-center;
+    flex-direction: column;
+    background-color: v.$tertiary-color;
+    height: 209px;
+    gap: 50px;
+
+    img {
+        max-width: 122px;
+        width: 100%;
+        max-height: 39px;
+        height: 100%;
+    }
+
+    p {
+        color: v.$secondary-color;
+        font-size: 24px;
+    }
+
+    @include m.responsive(mobile) {
+        gap: 10px;
+
+        p {
+            font-size: 12px;
+        }
+    }
+}
