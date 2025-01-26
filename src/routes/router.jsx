@@ -1,8 +1,9 @@
 import { createBrowserRouter } from "react-router-dom";
 import App from "../App";
-import Home from "../pages/Home";
-import About from "../pages/About";
-import NotFound from "../pages/NotFound";
+import Home from "../pages/Home/Home";
+import About from "../pages/About/About";
+import NotFound from "../pages/NotFound/NotFound";
+import Lodging from "../pages/Lodging/Lodging"
 
 function createRoutes() {
     return createBrowserRouter([
@@ -12,6 +13,7 @@ function createRoutes() {
             children: [
                 { path: "", element: <Home /> },
                 { path: "about", element: <About /> },
+                { path: "lodging/:id", element: <Lodging /> },
             ],
         },
         { path: "*", element: <NotFound /> }, // Page 404
