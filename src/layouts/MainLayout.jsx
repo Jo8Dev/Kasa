@@ -1,5 +1,5 @@
-import Header from "../components/Header/Header";
-import Footer from "../components/Footer/Footer";
+import Header from "../components/Header/Header"
+import Footer from "../components/Footer/Footer"
 
 function MainLayout({ children }) {
     return (
@@ -8,7 +8,7 @@ function MainLayout({ children }) {
             <main className="container">{children}</main>
             <Footer />
         </div>
-    );
+    )
 }
 
-export default MainLayout;
+export default MainLayout

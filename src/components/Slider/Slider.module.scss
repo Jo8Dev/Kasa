@@ -1,0 +1,42 @@
+@use "../../assets/styles/mixins" as m;
+
+.sliderContainer {
+    position: relative;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+
+    img {
+        width: 100vw;
+        height: 28.82vw;
+        border-radius: 25px;
+        object-fit: cover;
+    }
+
+    .arrowLeft,
+    .arrowRight {
+        position: absolute; //positionne les fleche par rapport a slidercontainer
+        top: 50%; //positionne au milieu les fleche a 50% de la hauteur de sliderconatiner
+        height: 5.5vw;
+        width: 3.24vw;
+        transform: translateY(-50%);
+        cursor: pointer;
+        z-index: 10;
+    }
+
+    .arrowLeft {
+        left: 10px;
+    }
+
+    .arrowRight {
+        right: 10px;
+    }
+
+    @include m.responsive(mobile) {
+        img {
+            height: 68vw;
+            border-radius: 10px;
+        }
+    }
+
+}
