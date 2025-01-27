@@ -1,0 +1,22 @@
+@use "../../assets/styles/mixins" as m;
+@use "../../assets/styles/variables" as v;
+
+.notFound {
+    @include m.flex-center;
+    flex-direction: column;
+    gap: 100px;
+
+    span {
+        color: v.$primary-color;
+        font-weight: 700;
+        font-size: clamp(96px, 20vw, 288px);
+    }
+
+    p {
+        font-size: clamp(18px, 2.5vw, 36px);
+    }
+
+    .link_to {
+        font-size: clamp(14px, 1.25vw, 18px);
+    }
+}

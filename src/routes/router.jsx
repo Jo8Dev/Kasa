@@ -14,9 +14,10 @@ function createRoutes() {
                 { path: "", element: <Home /> },
                 { path: "about", element: <About /> },
                 { path: "lodging/:id", element: <Lodging /> },
+                { path: "*", element: <NotFound /> },
             ],
         },
-        { path: "*", element: <NotFound /> }, // Page 404
+        // Page 404
     ]);
 }
 
