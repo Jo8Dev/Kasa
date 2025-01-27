@@ -14,7 +14,7 @@ function Lodging() {
             <Slider images={logements.pictures} />
             <h2>{logements.title}</h2>
             <p> {logements.location} </p>
-            <Tag />
+            <div className={styles.tags}>{logements.tags.map((tag) => <Tag tagname={tag} key={`${logements.id}-${tag}`} />)}</div>
         </div>
     )
 }

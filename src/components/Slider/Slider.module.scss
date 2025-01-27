@@ -1,4 +1,5 @@
 @use "../../assets/styles/mixins" as m;
+@use "../../assets/styles/variables" as v;
 
 .sliderContainer {
     position: relative;
@@ -11,6 +12,19 @@
         height: 28.82vw;
         border-radius: 25px;
         object-fit: cover;
+    }
+
+    .numerotation {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        color: v.$secondary-color ;
+        font-weight: 500;
+        font-size: 18px;
+
+        @include m.responsive(mobile) {
+            visibility: hidden; //Cache la numerotation au format mobile comme sur la maquette
+        }
     }
 
     .arrowLeft,

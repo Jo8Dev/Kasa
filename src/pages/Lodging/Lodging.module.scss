@@ -1,4 +1,5 @@
 @use "../../assets/styles/variables" as v;
+@use "../../assets/styles/mixins" as m;
 
 .lodging_card {
 
@@ -11,5 +12,11 @@
     p {
         font-weight: 500;
         font-size: 18px;
+    }
+
+    .tags {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
     }
 }
