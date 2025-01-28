@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom"
-import location from "../../data/lodging.json"
+import lodgings from "../../data/lodging.json"
 import styles from "./Lodging.module.scss"
 import Tag from "../../components/Tag/Tag"
 import Slider from "../../components/Slider/Slider"
@@ -7,14 +7,14 @@ import Slider from "../../components/Slider/Slider"
 function Lodging() {
     const { id } = useParams()
 
-    const logements = location.find(item => item.id === id)
+    const lodging = lodgings.find(item => item.id === id)
 
     return (
         <div className={styles.lodging_card}>
-            <Slider images={logements.pictures} />
-            <h2>{logements.title}</h2>
-            <p> {logements.location} </p>
-            <div className={styles.tags}>{logements.tags.map((tag) => <Tag tagname={tag} key={`${logements.id}-${tag}`} />)}</div>
+            <Slider images={lodging.pictures} />
+            <h2>{lodging.title}</h2>
+            <p> {lodging.location} </p>
+            <div className={styles.tags}>{lodging.tags.map((tag) => <Tag tagname={tag} key={`${lodging.id}-${tag}`} />)}</div>
         </div>
     )
 }

@@ -3,8 +3,8 @@
 
 .tag {
     @include m.flex-center;
-    width: 7.99vw;
-    height: 1.74vw;
+    width: clamp(115px, 7.99vw, 204px);
+    height: clamp(25px, 1.74vw, 44px);
     background-color: v.$primary-color ;
     color: v.$secondary-color ;
     border-radius: 10px;

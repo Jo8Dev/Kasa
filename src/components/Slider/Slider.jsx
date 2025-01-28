@@ -2,8 +2,10 @@ import { useState } from "react"
 import styles from "./Slider.module.scss"
 import arrowBack from "../../assets/icons/arrow_back.png"
 import arrowForward from "../../assets/icons/arrow_forward.png"
+import PropTypes from "prop-types";
 
 function Slider({ images }) {
+
     const [currentIndex, setCurrentIndex] = useState(0);
 
     //Fonction pour aller à l'image suivante
@@ -37,8 +39,10 @@ function Slider({ images }) {
             </div>
         )
     }
+}
 
-
+Slider.propTypes = {
+    images: PropTypes.arrayOf(PropTypes.string)
 }
 
 export default Slider

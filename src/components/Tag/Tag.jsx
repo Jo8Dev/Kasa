@@ -1,3 +1,4 @@
+import PropTypes from "prop-types"
 import styles from "./Tag.module.scss"
 function Tag({ tagname }) {
     return (
@@ -6,5 +7,10 @@ function Tag({ tagname }) {
         </div>
     )
 }
+
+Tag.propTypes = {
+    tagname: PropTypes.string.isRequired
+};
+
 
 export default Tag

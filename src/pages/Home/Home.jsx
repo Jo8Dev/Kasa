@@ -6,11 +6,9 @@ import location from "../../data/lodging.json"
 
 function Home() {
 
-    const text = "Chez vous, partout et ailleurs"
-
     return (
         <>
-            <Banner image={Bg} title={text} alt={"Falaise au bord de la mer"} />
+            <Banner image={Bg} title="Chez vous, partout et ailleurs" alt="Falaise au bord de la mer" />
             <div className={styles.card_container}>
                 <div className={styles.grid}>
                     {location.map(logement => (
