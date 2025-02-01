@@ -1,0 +1,22 @@
+@use "../../assets/styles/variables" as v;
+@use "../../assets/styles/mixins" as m;
+
+.host_info {
+    @include m.flex-center;
+    justify-content: space-around;
+
+    span {
+        width: 30%;
+        color: v.$primary-color ;
+        text-align: left;
+        font-size: clamp(12px, 1.25vw, 18px);
+        font-weight: 500;
+    }
+
+
+    img {
+        border-radius: 50%;
+        height: 64px;
+        width: 64px;
+    }
+}

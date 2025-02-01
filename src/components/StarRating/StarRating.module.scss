@@ -1,0 +1,10 @@
+@use "../../assets/styles/mixins" as m;
+
+.stars {
+    @include m.flex-center;
+
+    .star {
+        height: clamp(18px, 2.50vw, 36px);
+        width: clamp(18px, 2.50vw, 36px);
+    }
+}

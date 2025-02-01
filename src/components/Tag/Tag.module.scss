@@ -9,7 +9,7 @@
     color: v.$secondary-color ;
     border-radius: 10px;
     font-weight: 700;
-    font-size: 14px;
+    font-size: clamp(10px, 0.97vw, 14px);
 
     @include m.responsive(mobile) {
         width: 22.4vw;
