@@ -1,5 +1,5 @@
 const config = {
-    apiUrl: "../../public/data/lodging.json"
+    apiUrl: "/data/lodging.json"
 }
 
 export default config
