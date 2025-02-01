@@ -1,15 +1,21 @@
 import { useParams } from "react-router-dom"
-import lodgings from "../../data/lodging.json"
 import styles from "./Lodging.module.scss"
 import Tag from "../../components/Tag/Tag"
 import Slider from "../../components/Slider/Slider"
 import Host from "../../components/Host/Host"
 import StarRating from "../../components/StarRating/StarRating"
 import DropDown from "../../components/DropDown/DropDown"
+import { useFetch } from "../../hooks/useFetch"
+import config from "../../config/config"
 
 
 function Lodging() {
+    const { data: lodgings, loading } = useFetch(config.apiUrl);
     const { id } = useParams()
+
+    if (loading) return <div>Ca charge bro</div>
+
+
     const lodging = lodgings.find(item => item.id === id)
 
     return (
