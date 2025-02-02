@@ -1,14 +1,14 @@
-import styles from "./DropDown.module.scss";
-import arrow from "../../assets/icons/arrow_dropDown.svg";
-import { useState } from "react";
-import PropTypes from "prop-types";
+import styles from "./DropDown.module.scss"
+import arrow from "../../assets/icons/arrow_dropDown.svg"
+import { useState } from "react"
+import PropTypes from "prop-types"
 
 function DropDown({ title, text }) {
-    const [isVisible, setIsVisible] = useState(false);
+    const [isVisible, setIsVisible] = useState(false)
 
     const toggleVisibility = () => {
-        setIsVisible(!isVisible);
-    };
+        setIsVisible(!isVisible)
+    }
 
     return (
         <div className={styles.dropDown}>
@@ -33,7 +33,7 @@ function DropDown({ title, text }) {
                 )}
             </div>
         </div>
-    );
+    )
 }
 
 DropDown.propTypes = {
@@ -42,6 +42,6 @@ DropDown.propTypes = {
         PropTypes.string,
         PropTypes.arrayOf(PropTypes.string)
     ]).isRequired
-};
+}
 
-export default DropDown;
+export default DropDown

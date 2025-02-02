@@ -1,8 +1,8 @@
-import { createBrowserRouter } from "react-router-dom";
-import App from "../App";
-import Home from "../pages/Home/Home";
-import About from "../pages/About/About";
-import NotFound from "../pages/NotFound/NotFound";
+import { createBrowserRouter } from "react-router-dom"
+import App from "../App"
+import Home from "../pages/Home/Home"
+import About from "../pages/About/About"
+import NotFound from "../pages/NotFound/NotFound"
 import Lodging from "../pages/Lodging/Lodging"
 
 function createRoutes() {
@@ -18,8 +18,8 @@ function createRoutes() {
             ],
         },
 
-    ]);
+    ])
 }
 
-const router = createRoutes();
-export default router;
+const router = createRoutes()
+export default router

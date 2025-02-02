@@ -1,6 +1,6 @@
-import { Outlet } from "react-router-dom";
-import MainLayout from "./layouts/MainLayout";
-import React from "react";
+import { Outlet } from "react-router-dom"
+import MainLayout from "./layouts/MainLayout"
+import React from "react"
 
 
 function App() {
@@ -11,4 +11,4 @@ function App() {
   );
 }
 
-export default App;
+export default App

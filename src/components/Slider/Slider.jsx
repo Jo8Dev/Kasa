@@ -2,18 +2,18 @@ import { useState } from "react"
 import styles from "./Slider.module.scss"
 import arrowBack from "../../assets/icons/arrow_back.png"
 import arrowForward from "../../assets/icons/arrow_forward.png"
-import PropTypes from "prop-types";
+import PropTypes from "prop-types"
 
 function Slider({ images }) {
 
-    const [currentIndex, setCurrentIndex] = useState(0);
+    const [currentIndex, setCurrentIndex] = useState(0)
 
     //Fonction pour aller à l'image suivante
     const next = () => {
         setCurrentIndex((prevIndex) =>
             prevIndex === images.length - 1 ? 0 : prevIndex + 1
-        );
-    };
+        )
+    }
 
     //Fonction pour aller à l'image précedente
     const prev = () => {

@@ -10,20 +10,20 @@ export function useFetch(url) {
         //Fonction auto-exécuté asynchrone pour le fetch 
         (async () => {
             try {
-                const resp = await fetch(url);
+                const resp = await fetch(url)
                 if (!resp.ok) {
                     throw new Error(`Erreur lors du fetch : ${resp.status}`);
                 }
                 setData(await resp.json());//Update de data avec le json recupéré
             } catch (err) {
-                setError(err);
+                setError(err)
             }
             finally {
                 setLoading(false)
             }
-        })();
-    }, [url]); // Ajout d'une dépendance a "url" pour relancer le fetch si l'url change
+        })()
+    }, [url]) // Ajout d'une dépendance a "url" pour relancer le fetch si l'url change
 
     //Le hook retourne un objet avec 3 useState
-    return { data, error, loading };
+    return { data, error, loading }
 }

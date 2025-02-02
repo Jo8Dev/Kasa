@@ -1,7 +1,7 @@
-import Banner from "../../components/Banner/Banner";
+import Banner from "../../components/Banner/Banner"
 import Bg from "../../assets/images/Montain-background-2.jpg"
-import DropDown from "../../components/DropDown/DropDown";
-import styles from "./About.module.scss";
+import DropDown from "../../components/DropDown/DropDown"
+import styles from "./About.module.scss"
 
 function About() {
     return (
@@ -17,4 +17,4 @@ function About() {
     )
 }
 
-export default About;
+export default About
