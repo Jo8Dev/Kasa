@@ -17,7 +17,7 @@ function DropDown({ title, text }) {
                 <img
                     src={arrow}
                     alt="Flèche"
-                    className={`${isVisible ? "" : styles.rotated}`}
+                    className={`${isVisible ? styles.rotated : ""}`}
                     onClick={toggleVisibility}
                 />
             </div>
