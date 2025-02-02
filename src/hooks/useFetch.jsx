@@ -14,8 +14,7 @@ export function useFetch(url) {
                 if (!resp.ok) {
                     throw new Error(`Erreur lors du fetch : ${resp.status}`);
                 }
-                const json = await resp.json();
-                setData(json);//Update de data avec le json recupéré
+                setData(await resp.json());//Update de data avec le json recupéré
             } catch (err) {
                 setError(err);
             }

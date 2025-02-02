@@ -7,16 +7,20 @@ import StarRating from "../../components/StarRating/StarRating"
 import DropDown from "../../components/DropDown/DropDown"
 import { useFetch } from "../../hooks/useFetch"
 import config from "../../config/config"
+import { useMemo } from "react"
+import NotFound from "../NotFound/NotFound"
 
 
 function Lodging() {
-    const { data: lodgings, loading } = useFetch(config.apiUrl);
+    const { data: lodgings, loading, error } = useFetch(config.apiUrl);
     const { id } = useParams()
 
+    const lodging = useMemo(() => lodgings && lodgings.find(item => item.id === id), [lodgings, id])
+
+    if (error) return <div>⚠️Erreur : {error.message}</div>
     if (loading) return <div>En cours de chargement...</div>
+    if (!lodging) return <NotFound />
 
-
-    const lodging = lodgings.find(item => item.id === id)
 
     return (
         <div className={styles.lodging_card}>
@@ -39,6 +43,7 @@ function Lodging() {
             </div>
         </div>
     )
+
 }
 
 export default Lodging
