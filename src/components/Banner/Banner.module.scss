@@ -53,6 +53,9 @@
         @include m.background;
         background: rgba(0, 0, 0, 0.6);
 
+        @include m.responsive(mobile) {
+            border-radius: 10px;
+        }
     }
 }
 
@@ -61,5 +64,8 @@
         @include m.background;
         background: rgba(0, 0, 0, 0.3);
 
+        @include m.responsive(mobile) {
+            border-radius: 10px;
+        }
     }
 }

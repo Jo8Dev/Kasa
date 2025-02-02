@@ -21,16 +21,18 @@ function DropDown({ title, text }) {
                     onClick={toggleVisibility}
                 />
             </div>
-            <div className={`${styles.show} ${!isVisible ? styles.hide : ''}`}>
-                {Array.isArray(text) ? (
-                    <ul>
-                        {text.map((item, index) => (
-                            <li key={`${title}-${index}`}>{item}</li>
-                        ))}
-                    </ul>
-                ) : (
-                    <p>{text}</p>
-                )}
+            <div className={`${styles.wrapper} ${isVisible ? styles.is_open : ""}`}>
+                <div className={styles.inner}>
+                    {Array.isArray(text) ? (
+                        <ul>
+                            {text.map((item, index) => (
+                                <li key={`${title}-${index}`}>{item}</li>
+                            ))}
+                        </ul>
+                    ) : (
+                        <p>{text}</p>
+                    )}
+                </div>
             </div>
         </div>
     )
