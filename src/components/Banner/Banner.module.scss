@@ -6,18 +6,6 @@
     position: relative;
     width: 100%;
 
-    &::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.6);
-        border-radius: 25px;
-        z-index: 1;
-    }
-
     img {
         width: 100%;
         object-fit: cover;
@@ -56,5 +44,22 @@
         h1 {
             margin: 0 10vw; // Fait passer le texte sur deux lignes sur mobile
         }
+    }
+}
+
+//Permet de gerer la difference d'opacité du background 
+.dark_background {
+    &::before {
+        @include m.background;
+        background: rgba(0, 0, 0, 0.6);
+
+    }
+}
+
+.light_background {
+    &::before {
+        @include m.background;
+        background: rgba(0, 0, 0, 0.3);
+
     }
 }
