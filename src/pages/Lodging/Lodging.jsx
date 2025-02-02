@@ -13,7 +13,7 @@ function Lodging() {
     const { data: lodgings, loading } = useFetch(config.apiUrl);
     const { id } = useParams()
 
-    if (loading) return <div>Ca charge bro</div>
+    if (loading) return <div>En cours de chargement...</div>
 
 
     const lodging = lodgings.find(item => item.id === id)

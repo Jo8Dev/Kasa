@@ -7,9 +7,9 @@ import config from "../../config/config.js"
 
 function Home() {
     const { data: lodgings, error, loading } = useFetch(config.apiUrl);
-    if (loading) return <div>Ca charge bro</div>
+    if (loading) return <div>En cours de chargement...</div>
     if (error) return <div>Erreur : {error.message}</div>;
-    if (!lodgings) return null; // Ou un autre message
+    if (!lodgings) return null;
 
     return (
         <>
