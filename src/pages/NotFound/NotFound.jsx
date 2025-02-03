@@ -3,13 +3,10 @@ import styles from "./NotFound.module.scss"
 
 function NotFound() {
     return (
-        <div className="container">
-            <div className={styles.notFound}>
-                <span>404</span>
-                <p>Oups! La page que vous demandez n'existe pas.</p>
-                <Link to="/" className={styles.link_to}> Retourner sur la page d'acceuil </Link>
-            </div>
-
+        <div className={styles.notFound}>
+            <span>404</span>
+            <p>Oups! La page que vous demandez n'existe pas.</p>
+            <Link to="/" className={styles.link_to}> Retourner sur la page d'acceuil </Link>
         </div>
     )
 }

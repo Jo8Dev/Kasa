@@ -6,16 +6,16 @@
     @include m.flex-center;
     align-items: end;
     justify-content: left;
-    width: clamp(150px, 23.61vw, 600px);
-    height: clamp(150px, 23.61vw, 600px);
+    width: clamp(150px, 23.61vw, 340px);
+    height: clamp(150px, 23.61vw, 340px);
     border-radius: 10px;
+    position: relative;
 
     h2 {
         color: v.$secondary-color ;
         position: absolute;
         font-size: 18px;
         font-weight: 700;
-        width: 22vw;
         padding-left: 5px;
         margin: 0 0 0.69vw 0.69vw;
         text-overflow: ellipsis;

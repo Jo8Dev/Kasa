@@ -2,11 +2,14 @@
 @use "../../assets/styles/mixins" as m;
 
 .lodging_card {
+    max-width: 1240px;
+    margin: auto;
 
     .info {
         margin-top: 30px;
         @include m.flex-center;
         justify-content: space-between;
+        gap: 15px;
 
         .info_text {
             @include m.flex-center;
@@ -59,13 +62,13 @@
 
     .dropDown {
         @include m.flex-center;
-        margin-top: 30px;
+        margin-top: 20px;
         align-items: start;
         justify-content: space-between;
         gap: 5.28vw;
 
         @include m.responsive(mobile) {
-            gap: 15px;
+            gap: 20px;
             flex-direction: column;
         }
     }

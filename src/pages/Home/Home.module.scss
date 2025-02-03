@@ -4,14 +4,13 @@
     @include m.flex-center;
     margin: auto;
     margin-top: 50px;
-    width: 86.11vw;
 
     .grid {
         display: grid;
         margin: auto;
         padding: 1.39vw;
         grid-template-columns: repeat(3, 1fr);
-        gap: 1.39vw;
+        gap: clamp(29px, 3.82vw, 55px);
 
         @include m.responsive(mobile) {
             display: flex;

@@ -4,7 +4,7 @@
 .dropDown {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: clamp(335px, 100%, 1023px);
 
     .dropDown_top {
         @include m.flex-center;

@@ -4,7 +4,10 @@
 .notFound {
     @include m.flex-center;
     flex-direction: column;
-    gap: 100px;
+    gap: 139px;
+    padding: 0;
+    max-width: 100%;
+    text-align: center;
 
     span {
         color: v.$primary-color;
@@ -14,9 +17,15 @@
 
     p {
         font-size: clamp(18px, 2.5vw, 36px);
+
     }
 
     .link_to {
         font-size: clamp(14px, 1.25vw, 18px);
+    }
+
+    @include m.responsive(mobile) {
+        margin-top: 113px;
+        gap: 113px;
     }
 }

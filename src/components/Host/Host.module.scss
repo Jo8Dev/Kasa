@@ -16,7 +16,7 @@
 
     img {
         border-radius: 50%;
-        height: 64px;
-        width: 64px;
+        height: clamp(32px, 4.44vw, 64px);
+        width: clamp(32px, 4.44vw, 64px);
     }
 }

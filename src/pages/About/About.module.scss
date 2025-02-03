@@ -13,6 +13,7 @@
 
         @include m.responsive(mobile) {
             width: 100%;
+            gap: 20px;
         }
     }
 }

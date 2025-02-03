@@ -9,12 +9,12 @@
 
     ul {
         @include m.flex-center;
-        justify-content: space-around;
+        gap: 57px;
+        justify-content: right;
     }
 
     @include m.responsive(mobile) {
         font-size: 12px;
-        padding-left: 10px;
 
         ul {
             gap: 26px;

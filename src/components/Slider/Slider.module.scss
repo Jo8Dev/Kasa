@@ -3,13 +3,13 @@
 
 .sliderContainer {
     position: relative;
-    width: 100%;
+    width: clamp(200px, 100%, 1240px);
     margin: auto;
     text-align: center;
 
     img {
-        width: 100vw;
-        height: 28.82vw;
+        width: 100%;
+        height: 415px;
         border-radius: 25px;
         object-fit: cover;
     }
@@ -31,11 +31,17 @@
     .arrowRight {
         position: absolute; //positionne les fleche par rapport a slidercontainer
         top: 50%; //positionne au milieu les fleche a 50% de la hauteur de sliderconatiner
-        height: 5.5vw;
-        width: 3.24vw;
+        width: 47px;
+        height: 80px;
         transform: translateY(-50%);
         cursor: pointer;
         z-index: 10;
+
+        @include m.responsive(mobile) {
+
+            width: 24px;
+            height: 24px;
+        }
     }
 
     .arrowLeft {
@@ -47,6 +53,7 @@
     }
 
     @include m.responsive(mobile) {
+
         img {
             height: 68vw;
             border-radius: 10px;
