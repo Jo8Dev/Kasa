@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import styles from "./Slider.module.scss"
 import arrowBack from "../../assets/icons/arrow_back.png"
 import arrowForward from "../../assets/icons/arrow_forward.png"
@@ -22,13 +22,20 @@ function Slider({ images }) {
         );
     };
 
+    useEffect(() => {
+        const interval = setInterval(() => {
+            next();
+        }, 5000);
+        return () => clearInterval(interval);
+    }, [currentIndex]);
+
     //Condition pour gérer l'affichage des fleches et de la numerotation en fonction du nombre d'image
     if (images.length > 1) {
         return (
             <div className={styles.sliderContainer}>
                 <img src={arrowBack} className={styles.arrowLeft} onClick={prev} />
                 <span className={styles.numerotation}>{currentIndex + 1}/{images.length}</span>
-                <img src={images[currentIndex]} alt={`Slide ${currentIndex}`} className={styles.image} />
+                <img src={images[currentIndex]} alt={`Slide ${currentIndex}`} />
                 <img src={arrowForward} className={styles.arrowRight} onClick={next} />
             </div>
         );
