@@ -5,7 +5,6 @@ import PropTypes from "prop-types"
 function Card({ title, cover, id }) {
 
     return (
-
         < article >
             <Link to={`/lodging/${id}`} className={styles.card}>
                 <h2>{title}</h2>

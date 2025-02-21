@@ -11,10 +11,6 @@
     border-radius: 10px;
     position: relative;
 
-    &:hover {
-        @include m.shadow;
-    }
-
     h2 {
         color: v.$secondary-color ;
         position: absolute;
